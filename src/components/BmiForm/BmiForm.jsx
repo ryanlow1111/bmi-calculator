@@ -5,13 +5,13 @@ import '../App/App.css';
 const initialValues = {
 	weight: '',
 	height: '',
-	date: '',
-};
+	date: ''
+}
 
 const BmiForm = ({ change }) => {
 	const [state, setState] = useState(initialValues);
 
-	const handleChange = (e) => {
+	const handleChange = e => {
 		let { value, name } = e.target;
 		if (value > 999) {
 			value = 999;
@@ -20,25 +20,13 @@ const BmiForm = ({ change }) => {
 		setState({
 			...state,
 			[name]: value,
-			date,
+			date
 		});
 	};
 
 	const handleSubmit = () => {
 		change(state);
 		setState(initialValues);
-	};
-
-	const randomWeightHeight = () => {
-		const min = 1;
-		const max = 100;
-		const randWeight = min + Math.random() * (max - min);
-		const randHeight = min + Math.random() * (max - min);
-		
-		setState({
-			weight: Math.floor(randWeight),
-			height: Math.floor(randHeight),
-		});
 	};
 
 	return (
@@ -83,22 +71,12 @@ const BmiForm = ({ change }) => {
 					Calculate BMI
 				</button>
 			</div>
-			<div className="center">
-			<button
-					id="bmi-btn"
-					className="calculate-btn"
-					type="button"
-					onClick={randomWeightHeight}
-				>
-					Random Weight and Height
-				</button>
-			</div>
 		</>
 	);
 };
 
 BmiForm.propTypes = {
-	change: PropTypes.func.isRequired,
+	change: PropTypes.func.isRequired
 };
 
 export default BmiForm;
