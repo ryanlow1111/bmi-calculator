@@ -29,18 +29,6 @@ const BmiForm = ({ change }) => {
 		setState(initialValues);
 	};
 
-	const randomWeightHeight = () => {
-		const min = 1; //Minimum number
-		const max = 999; //Maximum number
-		const randWeight = min + Math.random() * (max - min);
-		const randHeight = min + Math.random() * (max - min);
-		
-		setState({
-			weight: Math.floor(randWeight),
-			height: Math.floor(randHeight),
-		});
-	};
-
 	return (
 		<>
 			<div className="row">
@@ -81,16 +69,6 @@ const BmiForm = ({ change }) => {
 					onClick={handleSubmit}
 				>
 					Calculate BMI
-				</button>
-			</div>
-			<div className="center">
-			<button
-					id="bmi-btn"
-					className="calculate-btn"
-					type="button"
-					onClick={randomWeightHeight}
-				>
-					Click here to generate Weight and Height
 				</button>
 			</div>
 		</>
