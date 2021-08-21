@@ -31,7 +31,7 @@ const BmiForm = ({ change }) => {
 
 	const randomWeightHeight = () => {
 		const min = 1;
-		const max = 100;
+		const max = 999;
 		const randWeight = min + Math.random() * (max - min);
 		const randHeight = min + Math.random() * (max - min);
 		
