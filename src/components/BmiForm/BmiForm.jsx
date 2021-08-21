@@ -30,8 +30,8 @@ const BmiForm = ({ change }) => {
 	};
 
 	const randomWeightHeight = () => {
-		const min = 1;
-		const max = 999;
+		const min = 1; //Minimum number
+		const max = 999; //Maximum number
 		const randWeight = min + Math.random() * (max - min);
 		const randHeight = min + Math.random() * (max - min);
 		
@@ -90,7 +90,7 @@ const BmiForm = ({ change }) => {
 					type="button"
 					onClick={randomWeightHeight}
 				>
-					Random Weight and Height
+					Click here to generate Weight and Height
 				</button>
 			</div>
 		</>
