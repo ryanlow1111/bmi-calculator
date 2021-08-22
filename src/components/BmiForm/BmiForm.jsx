@@ -76,6 +76,7 @@ const BmiForm = ({ change }) => {
 				<button
 					id="bmi-btn"
 					className="calculate-btn"
+					name="submitBtn"
 					type="button"
 					disabled={state.weight === '' || state.height === ''}
 					onClick={handleSubmit}

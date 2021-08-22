@@ -29,7 +29,7 @@ describe("BmiForm Component", () => {
   });
 
   it("should call change", () => {
-    wrapper.find("button").simulate("click");
+    wrapper.find("#submitBtn").simulate("click");
     expect(prop.change).toHaveBeenCalledTimes(1);
   });
 
