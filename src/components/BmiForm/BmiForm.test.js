@@ -29,12 +29,12 @@ describe("BmiForm Component", () => {
   });
 
   it("should call change", () => {
-    wrapper.find("#submitBtn").simulate("click");
+    wrapper.find("#bmi-btn").simulate("click");
     expect(prop.change).toHaveBeenCalledTimes(1);
   });
 
   it("should random weight and height", () => {
-    wrapper.find("#randomBtn").simulate("click");
+    wrapper.find("#rnd-btn").simulate("click");
     expect(prop.change).toHaveBeenCalledTimes(1);
   });
 });

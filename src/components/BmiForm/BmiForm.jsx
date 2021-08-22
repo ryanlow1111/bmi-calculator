@@ -76,7 +76,6 @@ const BmiForm = ({ change }) => {
 				<button
 					id="bmi-btn"
 					className="calculate-btn"
-					name="submitBtn"
 					type="button"
 					disabled={state.weight === '' || state.height === ''}
 					onClick={handleSubmit}
@@ -86,9 +85,9 @@ const BmiForm = ({ change }) => {
 			</div>
 			<div className="center">
 			<button
-					id="bmi-btn"
+					id="rnd-btn"
 					className="calculate-btn"
-					name="randomBtn"
+					
 					type="button"
 					onClick={randomWeightHeight}
 				>
