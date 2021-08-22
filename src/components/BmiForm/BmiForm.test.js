@@ -32,4 +32,9 @@ describe("BmiForm Component", () => {
     wrapper.find("button").simulate("click");
     expect(prop.change).toHaveBeenCalledTimes(1);
   });
+
+  it("should random weight and height", () => {
+    wrapper.find("#randomBtn").simulate("click");
+    expect(prop.change).toHaveBeenCalledTimes(1);
+  });
 });
